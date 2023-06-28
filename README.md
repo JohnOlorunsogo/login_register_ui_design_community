@@ -1,16 +1,16 @@
-# login_register_ui_design_community
+# login_register_ui_design_community#
 
-A new Flutter project.
 
-## Getting Started
+The login screen features a clean and crisp design with a prominent logo and a simple login form that includes fields for email and password. The registration screen includes fields for name, email, password, and phone number, with clear instructions and validation messages to ensure a smooth and error-free registration process.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The design also includes subtle animations and hover effects to enhance the user experience, as well as a responsive layout that adapts to different screen sizes and devices. The color scheme is neutral and versatile, making it easy to integrate into any brand or color palette.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+Whether you're building a new app or updating an existing one, this login and registration UI design is sure to impress your users and improve their overall experience.
+
+###[See Figma design](https://www.figma.com/community/file/1221149708459961043 here)
+
+##Design by Himanshu Hada
