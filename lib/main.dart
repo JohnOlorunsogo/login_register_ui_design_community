@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
         "/": (context) => const WelcomeScreen(), //"/" is the default route
         '/welcome': (context) => const WelcomeScreen(),
 
-        '/login': (context) => const LoginScreen(),
+        '/login': (context) => LoginScreen(),
         '/register': (context) => const SignUpScreen(),
         '/verification': (context) => const VerificationScreen(),
         '/slidePageView': (context) => const SlidePageView(),
