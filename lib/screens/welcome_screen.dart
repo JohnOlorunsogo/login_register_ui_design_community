@@ -24,7 +24,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   }
 
   void route() {
-    Navigator.pushReplacementNamed(context, '/slide1');
+    Navigator.pushReplacementNamed(context, '/slidePageView');
   }
 
   @override

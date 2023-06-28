@@ -1,6 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:login_register_ui_design_community/constant.dart';
 import 'package:login_register_ui_design_community/screens/signup_screen.dart';
 import 'package:login_register_ui_design_community/screens/slide_screens/1.dart';
 import 'package:login_register_ui_design_community/screens/slide_screens/2.dart';
@@ -31,16 +32,34 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const VerificationScreen(),
+      // home: const VerificationScreen(),
       debugShowCheckedModeBanner: false,
       routes: {
+        "/": (context) => const WelcomeScreen(), //"/" is the default route
         '/welcome': (context) => const WelcomeScreen(),
-        '/slide1': (context) => const SlideScreen1(),
-        '/slide2': (context) => const SlideScreen2(),
-        '/slide3': (context) => const SlideScreen3(),
+
         '/login': (context) => const LoginScreen(),
         '/register': (context) => const SignUpScreen(),
+        '/verification': (context) => const VerificationScreen(),
+        '/slidePageView': (context) => const SlidePageView(),
       },
+      // home: SlidePageView(),
+    );
+  }
+}
+
+class SlidePageView extends StatelessWidget {
+  const SlidePageView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return PageView(
+      controller: pageController,
+      children: const [
+        SlideScreen1(),
+        SlideScreen2(),
+        SlideScreen3(),
+      ],
     );
   }
 }

@@ -145,26 +145,24 @@ class VerificationScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: height * 0.22),
-            Positioned(
-              top: height * 0.845,
-              right: width * 0.78,
-              child: Row(
-                children: [
-                  Container(
-                    width: 50,
-                    height: 50,
-                    decoration: const ShapeDecoration(
-                      color: Color(0xFF252525),
-                      shape: OvalBorder(),
-                    ),
-                    child: IconButton(
-                      color: Colors.white,
-                      icon: const Icon(Icons.arrow_back_ios, size: 20),
-                      onPressed: () {},
-                    ),
+            Row(
+              children: [
+                Container(
+                  width: 50,
+                  height: 50,
+                  decoration: const ShapeDecoration(
+                    color: Color(0xFF252525),
+                    shape: OvalBorder(),
                   ),
-                ],
-              ),
+                  child: IconButton(
+                    color: Colors.white,
+                    icon: const Icon(Icons.arrow_back_ios, size: 20),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  ),
+                ),
+              ],
             ),
           ],
         ),

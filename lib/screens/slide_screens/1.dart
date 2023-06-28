@@ -62,7 +62,11 @@ class SlideScreen1 extends StatelessWidget {
                 color: Colors.white,
                 icon: const Icon(Icons.arrow_forward_ios, size: 20),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/slide2');
+                  pageController.animateToPage(
+                    1,
+                    duration: const Duration(milliseconds: 400),
+                    curve: Curves.easeInOut,
+                  );
                 },
               ),
             ),

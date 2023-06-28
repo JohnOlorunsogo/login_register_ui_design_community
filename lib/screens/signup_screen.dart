@@ -249,7 +249,9 @@ class SignUpScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                       child: InkWell(
                         borderRadius: BorderRadius.circular(10),
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.pushNamed(context, '/verification');
+                        },
                         child: SizedBox(
                           width: width * 0.83,
                           height: height * 0.063,
