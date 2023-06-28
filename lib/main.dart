@@ -5,6 +5,7 @@ import 'package:login_register_ui_design_community/screens/signup_screen.dart';
 import 'package:login_register_ui_design_community/screens/slide_screens/1.dart';
 import 'package:login_register_ui_design_community/screens/slide_screens/2.dart';
 import 'package:login_register_ui_design_community/screens/slide_screens/3.dart';
+import 'package:login_register_ui_design_community/screens/verification.dart';
 import 'package:login_register_ui_design_community/screens/welcome_screen.dart';
 
 import 'screens/login_screen.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const WelcomeScreen(),
+      home: const VerificationScreen(),
       debugShowCheckedModeBanner: false,
       routes: {
         '/welcome': (context) => const WelcomeScreen(),
