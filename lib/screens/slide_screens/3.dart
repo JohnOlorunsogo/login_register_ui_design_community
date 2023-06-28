@@ -65,7 +65,7 @@ class SlideScreen3 extends StatelessWidget {
                 color: Colors.white,
                 icon: const Icon(Icons.arrow_forward_ios, size: 20),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/login');
+                  Navigator.popAndPushNamed(context, '/login');
                 },
               ),
             ),

@@ -1,6 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:login_register_ui_design_community/screens/signup_screen.dart';
 import 'package:login_register_ui_design_community/screens/slide_screens/1.dart';
 import 'package:login_register_ui_design_community/screens/slide_screens/2.dart';
 import 'package:login_register_ui_design_community/screens/slide_screens/3.dart';
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
         '/slide2': (context) => const SlideScreen2(),
         '/slide3': (context) => const SlideScreen3(),
         '/login': (context) => const LoginScreen(),
+        '/register': (context) => const SignUpScreen(),
       },
     );
   }
