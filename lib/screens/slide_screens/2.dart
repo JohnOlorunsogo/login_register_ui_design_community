@@ -63,7 +63,9 @@ class SlideScreen2 extends StatelessWidget {
               child: IconButton(
                 color: Colors.white,
                 icon: const Icon(Icons.arrow_forward_ios, size: 20),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/slide3');
+                },
               ),
             ),
           ),
