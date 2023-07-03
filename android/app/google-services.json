@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "829122082821",
+    "project_id": "signin-ui-yj",
+    "storage_bucket": "signin-ui-yj.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829122082821:android:d21a3968e28b5cc9f6c46c",
+        "android_client_info": {
+          "package_name": "com.example.login_register_ui_design_community"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829122082821-h4930eaod4mudeu5i28bkgqp7laeivun.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK5rytblehdXASVBv-9fT46eskfsrTttE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "829122082821-h4930eaod4mudeu5i28bkgqp7laeivun.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "829122082821-9h78sgefr1erkib4h0imo95662c7907k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.loginRegisterUiDesignCommunity.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -41,6 +41,8 @@ dependencies:
   flutter_animate: ^4.2.0
   google_fonts: ^5.1.0
   flutter_verification_code: ^1.1.6
+  firebase_core: ^2.14.0
+  firebase_auth: ^4.6.3
 
 dev_dependencies:
   flutter_test:
