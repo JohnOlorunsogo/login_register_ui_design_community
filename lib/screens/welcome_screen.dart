@@ -19,7 +19,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   }
 
   startTime() async {
-    var duration = const Duration(seconds: 20);
+    var duration = const Duration(seconds: 1);
     return Timer(duration, route);
   }
 

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:login_register_ui_design_community/screens/home.dart';
+import 'package:provider/provider.dart';
+
+import '../controller/auth_controller.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
@@ -11,10 +13,8 @@ class LoginScreen extends StatelessWidget {
     var height = MediaQuery.sizeOf(context).height;
     var width = MediaQuery.sizeOf(context).width;
     var value2 = true;
-
-    validateEmail() {}
-
-    validatePassword() {}
+    final ref = Provider.of<AuthService>(context);
+    ref.context = context;
 
     return Scaffold(
       body: Center(
@@ -82,6 +82,7 @@ class LoginScreen extends StatelessWidget {
                               ),
                             ),
                             child: TextFormField(
+                              controller: ref.emailController,
                               validator: (value) {
                                 if (value!.isEmpty) {
                                   return 'Please enter your email';
@@ -121,6 +122,7 @@ class LoginScreen extends StatelessWidget {
                               ),
                             ),
                             child: TextFormField(
+                              controller: ref.passwordController,
                               obscureText: true,
                               validator: (value) {
                                 if (value!.isEmpty) {
@@ -164,11 +166,6 @@ class LoginScreen extends StatelessWidget {
                                         fontFamily: 'Montserrat',
                                         fontWeight: FontWeight.w400,
                                       ),
-                                      // style: GoogleFonts.archivo(
-                                      //   color: const Color(0xFF252525),
-                                      //   fontSize: 15,
-                                      //   fontWeight: FontWeight.w400,
-                                      // ),
                                     )
                                   ],
                                 ),
@@ -203,22 +200,9 @@ class LoginScreen extends StatelessWidget {
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
                             onTap: () {
-                              if (_key.currentState!.validate()) {
-                                Navigator.pop(context);
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const HomePage(),
-                                  ),
-                                );
+                              if (true) {
+                                ref.signIn();
                               }
-                              // Navigator.pop(context);
-                              // Navigator.push(
-                              //   context,
-                              //   MaterialPageRoute(
-                              //     builder: (context) => const HomePage(),
-                              //   ),
-                              // );
                             },
                             child: SizedBox(
                               width: width * 0.83,

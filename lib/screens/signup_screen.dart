@@ -4,6 +4,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
 
+  // TextEditingController _nameController = TextEditingController();
+
+  // TextEditingController _emailController = TextEditingController();
+
+  // TextEditingController _passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.sizeOf(context).height;
