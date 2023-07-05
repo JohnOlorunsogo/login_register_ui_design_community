@@ -30,30 +30,30 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      // useInheritedMediaQuery: true,
-      locale: DevicePreview.locale(context),
-      builder: DevicePreview.appBuilder,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return ChangeNotifierProvider(
+      create: (context) => AuthService(),
+      child: MaterialApp(
+        // useInheritedMediaQuery: true,
+        locale: DevicePreview.locale(context),
+        builder: DevicePreview.appBuilder,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+
+        debugShowCheckedModeBanner: false,
+        routes: {
+          "/": (context) => const WelcomeScreen(), //"/" is the default route
+          '/welcome': (context) => const WelcomeScreen(),
+
+          '/login': (context) => LoginScreen(),
+          '/register': (context) => const SignUpScreen(),
+          '/verification': (context) => const VerificationScreen(),
+          '/slidePageView': (context) => const SlidePageView(),
+        },
+        // home: SlidePageView(),
       ),
-
-      debugShowCheckedModeBanner: false,
-      routes: {
-        "/": (context) => const WelcomeScreen(), //"/" is the default route
-        '/welcome': (context) => const WelcomeScreen(),
-
-        '/login': (context) => ChangeNotifierProvider(
-              create: (context) => AuthService(),
-              child: LoginScreen(),
-            ),
-        '/register': (context) => const SignUpScreen(),
-        '/verification': (context) => const VerificationScreen(),
-        '/slidePageView': (context) => const SlidePageView(),
-      },
-      // home: SlidePageView(),
     );
   }
 }

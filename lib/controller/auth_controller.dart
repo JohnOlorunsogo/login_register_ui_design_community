@@ -33,11 +33,12 @@ class EmailUser implements UserRepository {
   }
 
   @override
-  Future register() {
-    return auth.signInWithEmailAndPassword(
+  Future<UserCredential> register() async {
+    UserCredential user = await auth.createUserWithEmailAndPassword(
       email: email,
       password: password,
     );
+    return user;
   }
 }
 
@@ -45,10 +46,7 @@ class AuthService extends ChangeNotifier {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   BuildContext? context;
-
   late UserRepository userRepository;
-
-  // AuthService(): Firebase;
 
   bool signedIn = false;
   User? get user => FirebaseAuth.instance.currentUser;
@@ -74,18 +72,23 @@ class AuthService extends ChangeNotifier {
 
       notifyListeners();
     } on FirebaseAuthException catch (e) {
-      print(e.code);
+      // print(e.code);
       ScaffoldMessenger.of(context!).showSnackBar(
         SnackBar(
-          content: Text(e.code),
+          content: Text(e.message!),
         ),
       );
     }
   }
 
   Future<void> register() async {
+    userRepository = EmailUser(
+      email: emailController.text,
+      password: passwordController.text,
+    );
     try {
-      await userRepository.register();
+      User user = await userRepository.register();
+      // user.displayName = emailController.text;
       notifyListeners();
     } catch (e) {
       rethrow;
